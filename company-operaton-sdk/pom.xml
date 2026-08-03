@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.company.operaton.sdk</groupId>
+  <artifactId>company-operaton-sdk-root</artifactId>
+  <version>0.1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+
+  <name>Company Operaton SDK</name>
+  <description>
+    Proof of concept: a standalone Spring MVC adapter and engine-configuration layer over
+    Operaton, built purely by consuming Operaton's published Maven artifacts. Never modifies
+    or forks Operaton source; runs no JAX-RS runtime (no Jersey/RestEasy).
+  </description>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>17</maven.compiler.release>
+
+    <!-- Pin to the exact Operaton version this SDK was generated/tested against. -->
+    <operaton.version>2.2.0-SNAPSHOT</operaton.version>
+
+    <!-- Must match the Spring Boot version operaton-bpm-spring-boot-starter is built against
+         (see spring-boot-starter/starter/pom.xml -> version.spring-boot in the Operaton root pom). -->
+    <version.spring-boot>4.1.0</version.spring-boot>
+
+    <!-- Same generator version Operaton itself pins for engine-rest-openapi, so generation
+         behavior matches what Operaton's own build already validated. -->
+    <openapi.generator.version>7.23.0</openapi.generator.version>
+  </properties>
+
+  <modules>
+    <module>company-operaton-bom</module>
+    <module>sdk-engine-config</module>
+    <module>sdk-adapter-rest</module>
+  </modules>
+
+  <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <configuration>
+            <release>${maven.compiler.release}</release>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+</project>

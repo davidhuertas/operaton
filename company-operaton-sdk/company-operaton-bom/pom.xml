@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>com.company.operaton.sdk</groupId>
+    <artifactId>company-operaton-sdk-root</artifactId>
+    <version>0.1.0-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <artifactId>company-operaton-bom</artifactId>
+  <packaging>pom</packaging>
+
+  <name>Company Operaton SDK - BOM</name>
+  <description>
+    Import this BOM to consume the Company Operaton SDK modules and a matching Operaton
+    version without specifying individual versions.
+  </description>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- Pulls in every org.operaton.bpm / org.operaton.commons / org.operaton.spin
+           artifact version that Operaton itself publishes and manages. -->
+      <dependency>
+        <groupId>org.operaton.bpm</groupId>
+        <artifactId>operaton-bom</artifactId>
+        <version>${operaton.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+
+      <!-- operaton-bom does NOT manage the Spring Boot starter (it lives in a separate
+           reactor/profile) - pin it explicitly here. -->
+      <dependency>
+        <groupId>org.operaton.bpm.springboot</groupId>
+        <artifactId>operaton-bpm-spring-boot-starter</artifactId>
+        <version>${operaton.version}</version>
+      </dependency>
+
+      <!-- This SDK's own modules. -->
+      <dependency>
+        <groupId>com.company.operaton.sdk</groupId>
+        <artifactId>sdk-engine-config</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.company.operaton.sdk</groupId>
+        <artifactId>sdk-adapter-rest</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+</project>
