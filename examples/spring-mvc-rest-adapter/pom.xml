@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.operaton.bpm.example</groupId>
+    <artifactId>operaton-example-root</artifactId>
+    <version>2.2.0-SNAPSHOT</version>
+  </parent>
+  <artifactId>operaton-example-spring-mvc-rest-adapter</artifactId>
+  <packaging>jar</packaging>
+  <name>Operaton - Example - Spring MVC REST Adapter</name>
+  <description>${project.name}</description>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.operaton.bpm</groupId>
+        <artifactId>operaton-core-internal-dependencies</artifactId>
+        <version>${project.version}</version>
+        <scope>import</scope>
+        <type>pom</type>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <dependencies>
+    <!--
+      The Operaton Spring Boot starter WITHOUT operaton-bpm-spring-boot-starter-rest.
+      That starter is what drags in Jersey and auto-configures the JAX-RS endpoints;
+      leaving it out is what keeps them from ever being built or started.
+    -->
+    <dependency>
+      <groupId>org.operaton.bpm.springboot</groupId>
+      <artifactId>operaton-bpm-spring-boot-starter</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <!--
+      The JAX-RS resource classes, DTOs and converters we delegate to.
+      This artifact depends on jakarta.ws.rs-api (annotations only) and on no
+      JAX-RS implementation, so nothing here serves HTTP by itself.
+    -->
+    <dependency>
+      <groupId>org.operaton.bpm</groupId>
+      <artifactId>operaton-engine-rest-core</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <!--
+      operaton-example-root declares operaton-engine as provided; the adapter needs
+      it at runtime, so re-declare it here at compile scope.
+    -->
+    <dependency>
+      <groupId>org.operaton.bpm</groupId>
+      <artifactId>operaton-engine</artifactId>
+    </dependency>
+    <!-- Spring Boot 4 renamed spring-boot-starter-web to spring-boot-starter-webmvc. -->
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-webmvc</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-webmvc-test</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.h2database</groupId>
+      <artifactId>h2</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <!--
+        Spring resolves @PathVariable / @RequestParam names from the compiled
+        parameter names. spring-boot-starter-parent switches this on for you;
+        this module inherits Operaton's parent instead, so it has to ask.
+        Without it every handler fails at runtime with "Name for argument of
+        type [java.lang.String] not specified".
+      -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <parameters>true</parameters>
+        </configuration>
+      </plugin>
+      <!--
+        Makes "no Jersey" a build guarantee rather than a convention: if any
+        dependency ever drags a JAX-RS implementation back onto the classpath,
+        the build fails instead of silently starting JAX-RS endpoints again.
+      -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>ban-jaxrs-runtime</id>
+            <goals>
+              <goal>enforce</goal>
+            </goals>
+            <configuration>
+              <rules>
+                <bannedDependencies>
+                  <searchTransitive>true</searchTransitive>
+                  <message>
+                    This module must not have a JAX-RS implementation on the classpath.
+                    Its whole point is that only Spring MVC serves HTTP.
+                  </message>
+                  <excludes>
+                    <exclude>org.glassfish.jersey.core:*</exclude>
+                    <exclude>org.glassfish.jersey.containers:*</exclude>
+                    <exclude>org.springframework.boot:spring-boot-starter-jersey</exclude>
+                    <exclude>org.jboss.resteasy:*</exclude>
+                    <exclude>org.operaton.bpm.springboot:operaton-bpm-spring-boot-starter-rest</exclude>
+                  </excludes>
+                </bannedDependencies>
+              </rules>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+</project>

@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:spring-mvc-rest-adapter;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=false
+    username: sa
+    password: sa
+
+operaton:
+  bpm:
+    # Keep the engine registered under its default name: the adapter's
+    # ProcessEngineProvider resolves it via ProcessEngines.getDefaultProcessEngine().
+    generate-unique-process-engine-name: false
+
+logging:
+  level:
+    org.operaton: WARN

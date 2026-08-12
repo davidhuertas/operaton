@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:operaton="http://operaton.org/schema/1.0/bpmn"
+                  id="adapter-test-definitions"
+                  targetNamespace="http://operaton.org/examples/spring-mvc-rest-adapter">
+  <bpmn:process id="adapterTestProcess" name="Adapter Test Process" isExecutable="true"
+                operaton:historyTimeToLive="5">
+    <bpmn:startEvent id="start">
+      <bpmn:outgoing>toReview</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:sequenceFlow id="toReview" sourceRef="start" targetRef="review"/>
+    <bpmn:userTask id="review" name="Review">
+      <bpmn:incoming>toReview</bpmn:incoming>
+      <bpmn:outgoing>toEnd</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="toEnd" sourceRef="review" targetRef="end"/>
+    <bpmn:endEvent id="end">
+      <bpmn:incoming>toEnd</bpmn:incoming>
+    </bpmn:endEvent>
+  </bpmn:process>
+</bpmn:definitions>

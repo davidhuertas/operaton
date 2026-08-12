@@ -81,5 +81,6 @@
   </build>
   <modules>
     <module>invoice</module>
+    <module>spring-mvc-rest-adapter</module>
   </modules>
 </project>
