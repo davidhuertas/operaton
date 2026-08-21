@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:d7fd41ed-62c1-4489-ac9f-1fd3c00a1468",
+  "serialNumber": "urn:uuid:fa3126f9-45ad-4cb2-8c67-551f17dd4639",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-08-21T10:51:10Z",
+    "timestamp": "2026-08-21T11:11:47Z",
     "tools": {
       "components": [
         {
@@ -23548,6 +23548,37 @@
     },
     {
       "type": "library",
+      "bom-ref": "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
+      "publisher": "Operaton",
+      "group": "org.operaton.bpm.distro",
+      "name": "operaton-sql-scripts",
+      "version": "7.25.0",
+      "description": "Operaton - SQL scripts",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
+      "externalReferences": [
+        {
+          "url": "https://www.operaton.org/operaton-database-settings/operaton-sql-scripts",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/operaton/operaton/issues/",
+          "type": "issue-tracker"
+        },
+        {
+          "url": "https://github.com/operaton/operaton/operaton-parent/operaton-database-settings/operaton-sql-scripts",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "type": "library",
       "bom-ref": "pkg:maven/org.operaton.bpm/operaton-external-task-client-root@2.2.0-M3?type=pom",
       "publisher": "Operaton",
       "group": "org.operaton.bpm",
@@ -23740,216 +23771,6 @@
         },
         {
           "url": "https://github.com/eclipse-ee4j/jaxb-istack-commons/istack-commons-runtime",
-          "type": "vcs"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.apache.groovy/groovy-templates@5.1.0?type=jar",
-      "publisher": "Apache Software Foundation",
-      "group": "org.apache.groovy",
-      "name": "groovy-templates",
-      "version": "5.1.0",
-      "description": "Groovy: A powerful multi-faceted language for the JVM",
-      "scope": "required",
-      "hashes": [
-        {
-          "alg": "MD5",
-          "content": "ed776eb91432c6098eee6623117733ce"
-        },
-        {
-          "alg": "SHA-1",
-          "content": "8905dd61654fcc6e92acb0ff31f8971649f04d45"
-        },
-        {
-          "alg": "SHA-256",
-          "content": "ee6b9ad05cbeb11eb910e31ffdaf5b0d92323645fcc2f6204cb45fac9c33dd37"
-        },
-        {
-          "alg": "SHA-512",
-          "content": "539286598896046366ecd8323cf0a0b33efa6e3202b5df90ae4ec8752fdbf234f36284f64a54cb3dbf8dc432e77929db11ae1911bb33c9cffee1e8d61365b73c"
-        },
-        {
-          "alg": "SHA-384",
-          "content": "4eb777c8308fb5692ac8cf494312098d02f319d6b5bdbec5d80bdfa348e0ad7f2cda6a3b04fcb83660fe048a65482bd5"
-        },
-        {
-          "alg": "SHA3-384",
-          "content": "e828fd9402b3abda13f0c41571056bd4d3cdce38b1c22ed1e74a41c12fe3cd8aa0cca6a77f9165928d8dac07bde81e28"
-        },
-        {
-          "alg": "SHA3-256",
-          "content": "a7bd5c0d8ef6176cf7df1b2e86e4b474bcc3224d1eabff032c998ca40943563f"
-        },
-        {
-          "alg": "SHA3-512",
-          "content": "b6d6d99623a8c8dc717523d3a0e604dfca8014a1a05c753f750711b68e46ff9003f9142d9c41bfdf4c9127db571a342fb2eaa58923400776dcd60733c48530db"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0"
-          }
-        }
-      ],
-      "purl": "pkg:maven/org.apache.groovy/groovy-templates@5.1.0?type=jar",
-      "externalReferences": [
-        {
-          "url": "https://groovy-lang.org",
-          "type": "website"
-        },
-        {
-          "url": "https://issues.apache.org/jira/browse/GROOVY",
-          "type": "issue-tracker"
-        },
-        {
-          "url": "https://mail-archives.apache.org/mod_mbox/groovy-dev/",
-          "type": "mailing-list"
-        },
-        {
-          "url": "https://github.com/apache/groovy.git",
-          "type": "vcs"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.apache.groovy/groovy-dateutil@5.1.0?type=jar",
-      "publisher": "Apache Software Foundation",
-      "group": "org.apache.groovy",
-      "name": "groovy-dateutil",
-      "version": "5.1.0",
-      "description": "Groovy: A powerful multi-faceted language for the JVM",
-      "scope": "required",
-      "hashes": [
-        {
-          "alg": "MD5",
-          "content": "143feabfe41215f24c9c57152fa0ff97"
-        },
-        {
-          "alg": "SHA-1",
-          "content": "7473ead58c6890bd8c8738bfa9a7a802ea4417db"
-        },
-        {
-          "alg": "SHA-256",
-          "content": "e26d07cea8fe792fdd0e6325fa56951fecca1374f6bed4c947114c054b58f766"
-        },
-        {
-          "alg": "SHA-512",
-          "content": "752f3ba51fc9cf5358ecb5eeee5b24135bb983a1d13b62d39e4fc36cb1f1ffbbcf207a1890e4eeb42fd64fd38f301aad40abc8d8809fc5ae8a8ac566b6b5713b"
-        },
-        {
-          "alg": "SHA-384",
-          "content": "9530bf2b9d556512cb0ce0892781df63e17d2a2c7f31318b554e7d0959fb2e51333310fe4d46fe6089ba77f19e426d2c"
-        },
-        {
-          "alg": "SHA3-384",
-          "content": "e95185560693082fbf5c6b6969a532dfc23d6b6d961d6326aca10e3a931fc4e70fb8cfa5ace7a858f194da12dadac2a3"
-        },
-        {
-          "alg": "SHA3-256",
-          "content": "7a0c4693467f9360956e6f0d7040952ce6d10e9a9aaa864e1c5699bb83b137d6"
-        },
-        {
-          "alg": "SHA3-512",
-          "content": "1707a24078c605a6833770f8aba0c1ac3093d81653c435a3b5f77aff3e69e25d1647dc8a6ad4793a2a857cae049e0f48a61523a12f87b84671cdcd780ff0c945"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0"
-          }
-        }
-      ],
-      "purl": "pkg:maven/org.apache.groovy/groovy-dateutil@5.1.0?type=jar",
-      "externalReferences": [
-        {
-          "url": "https://groovy-lang.org",
-          "type": "website"
-        },
-        {
-          "url": "https://issues.apache.org/jira/browse/GROOVY",
-          "type": "issue-tracker"
-        },
-        {
-          "url": "https://mail-archives.apache.org/mod_mbox/groovy-dev/",
-          "type": "mailing-list"
-        },
-        {
-          "url": "https://github.com/apache/groovy.git",
-          "type": "vcs"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.apache.groovy/groovy-datetime@5.1.0?type=jar",
-      "publisher": "Apache Software Foundation",
-      "group": "org.apache.groovy",
-      "name": "groovy-datetime",
-      "version": "5.1.0",
-      "description": "Groovy: A powerful multi-faceted language for the JVM",
-      "scope": "required",
-      "hashes": [
-        {
-          "alg": "MD5",
-          "content": "bb28443ee24f474ed3a74241744557d6"
-        },
-        {
-          "alg": "SHA-1",
-          "content": "ec30f01f730a95bbfe45c47e5080b676a8129d8c"
-        },
-        {
-          "alg": "SHA-256",
-          "content": "729ad8487650663e3c5120ace806080bdcb911cb18c39fbf181448492c9d9630"
-        },
-        {
-          "alg": "SHA-512",
-          "content": "7c1e5c7bb6bc8776b10b35462502540cc26042bf3168889a58048c590334630ac41a64ed13ba672b35429bf1a754d8268be230bdf9733284fe5cc6a7c94c8e5a"
-        },
-        {
-          "alg": "SHA-384",
-          "content": "41ed032643e3bd26941b5004c47943c409775e7d2e9d29d698d3985ad41ac3f4f94722f045a4276793587af61cc8d03d"
-        },
-        {
-          "alg": "SHA3-384",
-          "content": "6f1c43d254624cf5c772a6353db0916504bb59b806705bb37ae55029bac367d8e0f71830326da343d4dfa020090fef5b"
-        },
-        {
-          "alg": "SHA3-256",
-          "content": "dcb527b37a1042bcf0195fbd8502f8ee3e9219a9668fbca759f9a8f476f29abd"
-        },
-        {
-          "alg": "SHA3-512",
-          "content": "1542758247a0f55ff94a56a4b236baaaf4a05665fc2bfafd8555484a1ed483f655e0b8d46a4e8d94a2728b7e054d9fdf2e2244ea5581c7b45c928c7ab02a886a"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0"
-          }
-        }
-      ],
-      "purl": "pkg:maven/org.apache.groovy/groovy-datetime@5.1.0?type=jar",
-      "externalReferences": [
-        {
-          "url": "https://groovy-lang.org",
-          "type": "website"
-        },
-        {
-          "url": "https://issues.apache.org/jira/browse/GROOVY",
-          "type": "issue-tracker"
-        },
-        {
-          "url": "https://mail-archives.apache.org/mod_mbox/groovy-dev/",
-          "type": "mailing-list"
-        },
-        {
-          "url": "https://github.com/apache/groovy.git",
           "type": "vcs"
         }
       ]
@@ -26167,40 +25988,6 @@
       "version": "2.2.0-M3",
       "description": "Operaton - Example - Invoice",
       "scope": "required",
-      "hashes": [
-        {
-          "alg": "MD5",
-          "content": "b4398a8cf1ee1d9eba5e23d873f60301"
-        },
-        {
-          "alg": "SHA-1",
-          "content": "51cb1819e2d8a5a752b769b120f36a346be349e1"
-        },
-        {
-          "alg": "SHA-256",
-          "content": "a0e95b58a332fe3141827b8dcf6322182ba7b1796467987e2667f812f0cd999c"
-        },
-        {
-          "alg": "SHA-512",
-          "content": "fa832b608d846273a791a1c0a6f01cfd126f1ee699210f535e7262113db57e70826756d9357d8a0947739e103763a6e5ea110cd1755837ca71a9559d0f3d07c8"
-        },
-        {
-          "alg": "SHA-384",
-          "content": "24dd47130a891e8768cfacf220ea9e3fbe2796eb68dfe8027d813562e8528d4580efb668bc561bee29ce80ecb1acb7f0"
-        },
-        {
-          "alg": "SHA3-384",
-          "content": "99ece4d36201df675c88d11c82b8cb778f8e7351acd77b700b84e222ec986f589ab4c4713663052846bbaa800982cf16"
-        },
-        {
-          "alg": "SHA3-256",
-          "content": "90801d03e660d0c63e79b2a3974adef73547fc6ad98b6a4de374d6ce5cda7a78"
-        },
-        {
-          "alg": "SHA3-512",
-          "content": "3119e648185980f38d41a3afa466978ef1f184abf3831b5eb00cb4a0b7107dd363291c3720c5074846dd379b4f1e746fcdf5d3fd5205e95f215f031891523203"
-        }
-      ],
       "licenses": [
         {
           "license": {
@@ -26680,6 +26467,216 @@
     },
     {
       "type": "library",
+      "bom-ref": "pkg:maven/org.apache.groovy/groovy-templates@5.1.0?type=jar",
+      "publisher": "Apache Software Foundation",
+      "group": "org.apache.groovy",
+      "name": "groovy-templates",
+      "version": "5.1.0",
+      "description": "Groovy: A powerful multi-faceted language for the JVM",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "ed776eb91432c6098eee6623117733ce"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "8905dd61654fcc6e92acb0ff31f8971649f04d45"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "ee6b9ad05cbeb11eb910e31ffdaf5b0d92323645fcc2f6204cb45fac9c33dd37"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "539286598896046366ecd8323cf0a0b33efa6e3202b5df90ae4ec8752fdbf234f36284f64a54cb3dbf8dc432e77929db11ae1911bb33c9cffee1e8d61365b73c"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "4eb777c8308fb5692ac8cf494312098d02f319d6b5bdbec5d80bdfa348e0ad7f2cda6a3b04fcb83660fe048a65482bd5"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "e828fd9402b3abda13f0c41571056bd4d3cdce38b1c22ed1e74a41c12fe3cd8aa0cca6a77f9165928d8dac07bde81e28"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "a7bd5c0d8ef6176cf7df1b2e86e4b474bcc3224d1eabff032c998ca40943563f"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "b6d6d99623a8c8dc717523d3a0e604dfca8014a1a05c753f750711b68e46ff9003f9142d9c41bfdf4c9127db571a342fb2eaa58923400776dcd60733c48530db"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.apache.groovy/groovy-templates@5.1.0?type=jar",
+      "externalReferences": [
+        {
+          "url": "https://groovy-lang.org",
+          "type": "website"
+        },
+        {
+          "url": "https://issues.apache.org/jira/browse/GROOVY",
+          "type": "issue-tracker"
+        },
+        {
+          "url": "https://mail-archives.apache.org/mod_mbox/groovy-dev/",
+          "type": "mailing-list"
+        },
+        {
+          "url": "https://github.com/apache/groovy.git",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.apache.groovy/groovy-dateutil@5.1.0?type=jar",
+      "publisher": "Apache Software Foundation",
+      "group": "org.apache.groovy",
+      "name": "groovy-dateutil",
+      "version": "5.1.0",
+      "description": "Groovy: A powerful multi-faceted language for the JVM",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "143feabfe41215f24c9c57152fa0ff97"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "7473ead58c6890bd8c8738bfa9a7a802ea4417db"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "e26d07cea8fe792fdd0e6325fa56951fecca1374f6bed4c947114c054b58f766"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "752f3ba51fc9cf5358ecb5eeee5b24135bb983a1d13b62d39e4fc36cb1f1ffbbcf207a1890e4eeb42fd64fd38f301aad40abc8d8809fc5ae8a8ac566b6b5713b"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "9530bf2b9d556512cb0ce0892781df63e17d2a2c7f31318b554e7d0959fb2e51333310fe4d46fe6089ba77f19e426d2c"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "e95185560693082fbf5c6b6969a532dfc23d6b6d961d6326aca10e3a931fc4e70fb8cfa5ace7a858f194da12dadac2a3"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "7a0c4693467f9360956e6f0d7040952ce6d10e9a9aaa864e1c5699bb83b137d6"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "1707a24078c605a6833770f8aba0c1ac3093d81653c435a3b5f77aff3e69e25d1647dc8a6ad4793a2a857cae049e0f48a61523a12f87b84671cdcd780ff0c945"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.apache.groovy/groovy-dateutil@5.1.0?type=jar",
+      "externalReferences": [
+        {
+          "url": "https://groovy-lang.org",
+          "type": "website"
+        },
+        {
+          "url": "https://issues.apache.org/jira/browse/GROOVY",
+          "type": "issue-tracker"
+        },
+        {
+          "url": "https://mail-archives.apache.org/mod_mbox/groovy-dev/",
+          "type": "mailing-list"
+        },
+        {
+          "url": "https://github.com/apache/groovy.git",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "bom-ref": "pkg:maven/org.apache.groovy/groovy-datetime@5.1.0?type=jar",
+      "publisher": "Apache Software Foundation",
+      "group": "org.apache.groovy",
+      "name": "groovy-datetime",
+      "version": "5.1.0",
+      "description": "Groovy: A powerful multi-faceted language for the JVM",
+      "scope": "required",
+      "hashes": [
+        {
+          "alg": "MD5",
+          "content": "bb28443ee24f474ed3a74241744557d6"
+        },
+        {
+          "alg": "SHA-1",
+          "content": "ec30f01f730a95bbfe45c47e5080b676a8129d8c"
+        },
+        {
+          "alg": "SHA-256",
+          "content": "729ad8487650663e3c5120ace806080bdcb911cb18c39fbf181448492c9d9630"
+        },
+        {
+          "alg": "SHA-512",
+          "content": "7c1e5c7bb6bc8776b10b35462502540cc26042bf3168889a58048c590334630ac41a64ed13ba672b35429bf1a754d8268be230bdf9733284fe5cc6a7c94c8e5a"
+        },
+        {
+          "alg": "SHA-384",
+          "content": "41ed032643e3bd26941b5004c47943c409775e7d2e9d29d698d3985ad41ac3f4f94722f045a4276793587af61cc8d03d"
+        },
+        {
+          "alg": "SHA3-384",
+          "content": "6f1c43d254624cf5c772a6353db0916504bb59b806705bb37ae55029bac367d8e0f71830326da343d4dfa020090fef5b"
+        },
+        {
+          "alg": "SHA3-256",
+          "content": "dcb527b37a1042bcf0195fbd8502f8ee3e9219a9668fbca759f9a8f476f29abd"
+        },
+        {
+          "alg": "SHA3-512",
+          "content": "1542758247a0f55ff94a56a4b236baaaf4a05665fc2bfafd8555484a1ed483f655e0b8d46a4e8d94a2728b7e054d9fdf2e2244ea5581c7b45c928c7ab02a886a"
+        }
+      ],
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.apache.groovy/groovy-datetime@5.1.0?type=jar",
+      "externalReferences": [
+        {
+          "url": "https://groovy-lang.org",
+          "type": "website"
+        },
+        {
+          "url": "https://issues.apache.org/jira/browse/GROOVY",
+          "type": "issue-tracker"
+        },
+        {
+          "url": "https://mail-archives.apache.org/mod_mbox/groovy-dev/",
+          "type": "mailing-list"
+        },
+        {
+          "url": "https://github.com/apache/groovy.git",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "type": "library",
       "bom-ref": "pkg:maven/org.operaton.bpm.run/operaton-bpm-run@2.2.0-M3?type=pom",
       "publisher": "Operaton",
       "group": "org.operaton.bpm.run",
@@ -26718,40 +26715,6 @@
       "version": "2.2.0-M3",
       "description": "Operaton - Run - Assembly",
       "scope": "required",
-      "hashes": [
-        {
-          "alg": "MD5",
-          "content": "c8211ae667fb6374310dbc084f7713b8"
-        },
-        {
-          "alg": "SHA-1",
-          "content": "8496a07908b5bc982373a01dcde27e2b1a6afb6b"
-        },
-        {
-          "alg": "SHA-256",
-          "content": "6f6cb443330e244c8f981819c27dd46dbe4e161450827804020e55d68ef0892c"
-        },
-        {
-          "alg": "SHA-512",
-          "content": "5ee9770c1e9c8c4f61855fb3321afed76bb7ec183b77b69e507b9e2236a8dc1352a0d2b88833739f236043b8a0a8af76009fb5483f3cfafcf6d1a51a4b899f59"
-        },
-        {
-          "alg": "SHA-384",
-          "content": "63a9b60ca39a1903618bb908d3b750bf78ff76403dad153ad2401f39fea145b9c4dd9d06ca2cf64577bee4af1d7269b1"
-        },
-        {
-          "alg": "SHA3-384",
-          "content": "4ee81ad0f10a6aeafec40e87f885ae141617f428e57657a7389d3ec0411b43f3cf27136ee1c285d2a8063fb61e278ab5"
-        },
-        {
-          "alg": "SHA3-256",
-          "content": "d67fc3277806b6f0f216f53a2b1fca076f4e657a044e6e8210aabe6e22aaeab7"
-        },
-        {
-          "alg": "SHA3-512",
-          "content": "51a76652378fd7665a71edce7165342cfc124581d6fdd4c78df7a56e21aa99dc561718a95d703aadae516e453130d49bf56387b087dc89959f5130f44444aecc"
-        }
-      ],
       "licenses": [
         {
           "license": {
@@ -26771,72 +26734,6 @@
         },
         {
           "url": "https://github.com/operaton/operaton/operaton-parent/operaton-database-settings/operaton-bpm-run-root/operaton-bpm-run-assembly",
-          "type": "vcs"
-        }
-      ]
-    },
-    {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
-      "publisher": "Operaton",
-      "group": "org.operaton.bpm.distro",
-      "name": "operaton-sql-scripts",
-      "version": "7.25.0",
-      "description": "Operaton - SQL scripts",
-      "scope": "required",
-      "hashes": [
-        {
-          "alg": "MD5",
-          "content": "88be7cb5e19d2bc00139550ceb726644"
-        },
-        {
-          "alg": "SHA-1",
-          "content": "218dcc6f8447d9f14ab97bc3b01e3786b2bc768b"
-        },
-        {
-          "alg": "SHA-256",
-          "content": "0c7ef22d5f7597d2bab3521b1af8c3b94ea70f238b6f16e820325b2477778073"
-        },
-        {
-          "alg": "SHA-512",
-          "content": "27901c44ffce68db5abdaa6ad07ec6d4372a8fb3f83ff7b42a83285e1aba02512e54625ea3ea6f2cb4aba05fba09b381ca4ce25c722920b964756d102e10198f"
-        },
-        {
-          "alg": "SHA-384",
-          "content": "1abd2bcf3fae542c7f000cbdb057d4f2c5cb07c0a196bb189cd199c489f441a57298e5059cb7fd07dad016c7b6e9eede"
-        },
-        {
-          "alg": "SHA3-384",
-          "content": "cdada96ef810414c9f14a5ce606c99071303bb61d117206cb4ded5532190c27c1f63131fa1cc4dc5241a8ff16117a6bb"
-        },
-        {
-          "alg": "SHA3-256",
-          "content": "30b14079d92562a97fcb06f937ba33baf7622a4a3bdbe39d09405757c2c12898"
-        },
-        {
-          "alg": "SHA3-512",
-          "content": "546d5a3dd2ea947b433d9f4c4c4346795414743060ed074288e4c458161fce6a07bc620734edf99fe1b7dc1398c769ea31cc67f6ceddd301ea292f4878acd30a"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0"
-          }
-        }
-      ],
-      "purl": "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
-      "externalReferences": [
-        {
-          "url": "https://www.operaton.org/operaton-database-settings/operaton-sql-scripts",
-          "type": "website"
-        },
-        {
-          "url": "https://github.com/operaton/operaton/issues/",
-          "type": "issue-tracker"
-        },
-        {
-          "url": "https://github.com/operaton/operaton/operaton-parent/operaton-database-settings/operaton-sql-scripts",
           "type": "vcs"
         }
       ]
@@ -26998,7 +26895,7 @@
     },
     {
       "type": "application",
-      "bom-ref": "e2b49921-7929-492d-b6af-41a223d8b988",
+      "bom-ref": "314b7fb7-525a-4cff-be4c-c06944aa163c",
       "name": "package-lock.json",
       "properties": [
         {
@@ -32254,7 +32151,7 @@
     },
     {
       "type": "application",
-      "bom-ref": "51e28669-1181-450d-a00d-58b147ca31db",
+      "bom-ref": "4250695b-893f-48dd-a98b-613fae5ffaa5",
       "name": "/repo/webapps/frontend",
       "properties": [
         {
@@ -32628,6 +32525,7 @@
         "pkg:maven/org.operaton.bpm.webapp/operaton-webapp-root@2.2.0-M3?type=pom",
         "pkg:maven/org.operaton.bpm.webapp-neo/operaton-webapp-neo-root@2.2.0-M3?type=pom",
         "pkg:maven/org.operaton.bpm.example/operaton-example-root@2.2.0-M3?type=pom",
+        "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
         "pkg:maven/org.operaton.bpm.run/operaton-bpm-run-root@2.2.0-M3?type=pom"
       ]
     },
@@ -34412,6 +34310,13 @@
       ]
     },
     {
+      "ref": "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.operaton.bpm/operaton-engine@2.2.0-M3?type=jar",
+        "pkg:maven/org.junit.jupiter/junit-jupiter@6.0.3?type=jar"
+      ]
+    },
+    {
       "ref": "pkg:maven/org.operaton.bpm/operaton-external-task-client-root@2.2.0-M3?type=pom",
       "dependsOn": [
         "pkg:maven/org.junit.jupiter/junit-jupiter@6.0.3?type=jar",
@@ -35448,12 +35353,6 @@
       ]
     },
     {
-      "ref": "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
-      "dependsOn": [
-        "pkg:maven/org.junit.jupiter/junit-jupiter@6.0.3?type=jar"
-      ]
-    },
-    {
       "ref": "pkg:maven/org.operaton.bpm.run/operaton-bpm-run-qa@2.2.0-M3?type=pom",
       "dependsOn": [
         "pkg:maven/org.operaton.bpm.run/operaton-bpm-run-example-plugin@2.2.0-M3?type=jar",
@@ -35481,13 +35380,7 @@
       "dependsOn": []
     },
     {
-      "ref": "51e28669-1181-450d-a00d-58b147ca31db",
-      "dependsOn": [
-        "e2b49921-7929-492d-b6af-41a223d8b988"
-      ]
-    },
-    {
-      "ref": "e2b49921-7929-492d-b6af-41a223d8b988",
+      "ref": "314b7fb7-525a-4cff-be4c-c06944aa163c",
       "dependsOn": [
         "pkg:npm/%40bpmn-io/dmn-migrate@0.7.1",
         "pkg:npm/%40bpmn-io/form-js@1.24.1",
@@ -35534,6 +35427,12 @@
         "pkg:npm/requirejs-angular-define@1.1.0",
         "pkg:npm/requirejs@2.3.8",
         "pkg:npm/superagent@10.3.0"
+      ]
+    },
+    {
+      "ref": "4250695b-893f-48dd-a98b-613fae5ffaa5",
+      "dependsOn": [
+        "314b7fb7-525a-4cff-be4c-c06944aa163c"
       ]
     },
     {

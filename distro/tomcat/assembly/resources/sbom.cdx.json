@@ -1,10 +1,10 @@
 {
   "bomFormat": "CycloneDX",
   "specVersion": "1.7",
-  "serialNumber": "urn:uuid:fe77de4b-9416-47a3-bdca-1d2de6cbab27",
+  "serialNumber": "urn:uuid:1bfc53fc-50ce-4d7a-84dc-3c5e13f7a3b9",
   "version": 1,
   "metadata": {
-    "timestamp": "2026-08-21T10:51:10Z",
+    "timestamp": "2026-08-21T11:11:47Z",
     "tools": {
       "components": [
         {
@@ -18838,6 +18838,37 @@
     },
     {
       "type": "library",
+      "bom-ref": "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
+      "publisher": "Operaton",
+      "group": "org.operaton.bpm.distro",
+      "name": "operaton-sql-scripts",
+      "version": "7.25.0",
+      "description": "Operaton - SQL scripts",
+      "licenses": [
+        {
+          "license": {
+            "id": "Apache-2.0"
+          }
+        }
+      ],
+      "purl": "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
+      "externalReferences": [
+        {
+          "url": "https://www.operaton.org/operaton-database-settings/operaton-sql-scripts",
+          "type": "website"
+        },
+        {
+          "url": "https://github.com/operaton/operaton/issues/",
+          "type": "issue-tracker"
+        },
+        {
+          "url": "https://github.com/operaton/operaton/operaton-parent/operaton-database-settings/operaton-sql-scripts",
+          "type": "vcs"
+        }
+      ]
+    },
+    {
+      "type": "library",
       "bom-ref": "pkg:maven/org.operaton.bpm/operaton-external-task-client-root@2.2.0-M3?type=pom",
       "publisher": "Operaton",
       "group": "org.operaton.bpm",
@@ -19438,40 +19469,6 @@
       "version": "2.2.0-M3",
       "description": "Assembles the Operaton and makes it ready for qa. The assembly is installed to maven later in the reactor, if the integration tests pass sucessfully",
       "scope": "required",
-      "hashes": [
-        {
-          "alg": "MD5",
-          "content": "cf03e89628c2327f054b98d550e37fdb"
-        },
-        {
-          "alg": "SHA-1",
-          "content": "c84c3a3c84f24632b4784c291471c3eb06c31eed"
-        },
-        {
-          "alg": "SHA-256",
-          "content": "463206525089001a4b4741939968809d889b7beb7d823351ad9b0700bfe33fbd"
-        },
-        {
-          "alg": "SHA-512",
-          "content": "1642c415822a717d236844d7ec1d5e0a15cf88f1e819faf155e4c02397467df6810e3af8882b3f101f3233f9ea2ce12182c1960ca8f3d8d00632c049df67fbf6"
-        },
-        {
-          "alg": "SHA-384",
-          "content": "4e57717128958b2f4f72dac15bddf1b7b9481167a564fad66dd9b01cd20779543f9b1fa610a25aab8976f981bec4698f"
-        },
-        {
-          "alg": "SHA3-384",
-          "content": "b8d3806d50d63ada50fef99d80e85c00c64faa9fc9bd177957e4c7f98cba0ae72ae19a375b874a1b2b391849071e5a5f"
-        },
-        {
-          "alg": "SHA3-256",
-          "content": "0403d7449cdb62b566a8457c5b5a34cd8a2ad912304e4c14d4ccfd103e34044b"
-        },
-        {
-          "alg": "SHA3-512",
-          "content": "f34a2f66cc62f35f5078dc037639fe014468727fcbcb565650fdb6e07218a641ec4ad8d5191602e2e8e1dfc7fcd08df2b2f7fad3864078bce5c86c5719f84ee9"
-        }
-      ],
       "licenses": [
         {
           "license": {
@@ -19682,72 +19679,6 @@
       ]
     },
     {
-      "type": "library",
-      "bom-ref": "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
-      "publisher": "Operaton",
-      "group": "org.operaton.bpm.distro",
-      "name": "operaton-sql-scripts",
-      "version": "7.25.0",
-      "description": "Operaton - SQL scripts",
-      "scope": "required",
-      "hashes": [
-        {
-          "alg": "MD5",
-          "content": "88be7cb5e19d2bc00139550ceb726644"
-        },
-        {
-          "alg": "SHA-1",
-          "content": "218dcc6f8447d9f14ab97bc3b01e3786b2bc768b"
-        },
-        {
-          "alg": "SHA-256",
-          "content": "0c7ef22d5f7597d2bab3521b1af8c3b94ea70f238b6f16e820325b2477778073"
-        },
-        {
-          "alg": "SHA-512",
-          "content": "27901c44ffce68db5abdaa6ad07ec6d4372a8fb3f83ff7b42a83285e1aba02512e54625ea3ea6f2cb4aba05fba09b381ca4ce25c722920b964756d102e10198f"
-        },
-        {
-          "alg": "SHA-384",
-          "content": "1abd2bcf3fae542c7f000cbdb057d4f2c5cb07c0a196bb189cd199c489f441a57298e5059cb7fd07dad016c7b6e9eede"
-        },
-        {
-          "alg": "SHA3-384",
-          "content": "cdada96ef810414c9f14a5ce606c99071303bb61d117206cb4ded5532190c27c1f63131fa1cc4dc5241a8ff16117a6bb"
-        },
-        {
-          "alg": "SHA3-256",
-          "content": "30b14079d92562a97fcb06f937ba33baf7622a4a3bdbe39d09405757c2c12898"
-        },
-        {
-          "alg": "SHA3-512",
-          "content": "546d5a3dd2ea947b433d9f4c4c4346795414743060ed074288e4c458161fce6a07bc620734edf99fe1b7dc1398c769ea31cc67f6ceddd301ea292f4878acd30a"
-        }
-      ],
-      "licenses": [
-        {
-          "license": {
-            "id": "Apache-2.0"
-          }
-        }
-      ],
-      "purl": "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
-      "externalReferences": [
-        {
-          "url": "https://www.operaton.org/operaton-database-settings/operaton-sql-scripts",
-          "type": "website"
-        },
-        {
-          "url": "https://github.com/operaton/operaton/issues/",
-          "type": "issue-tracker"
-        },
-        {
-          "url": "https://github.com/operaton/operaton/operaton-parent/operaton-database-settings/operaton-sql-scripts",
-          "type": "vcs"
-        }
-      ]
-    },
-    {
       "type": "application",
       "bom-ref": "pkg:maven/org.operaton.bpm/operaton-root@2.2.0-M3?type=pom",
       "publisher": "Operaton",
@@ -19780,7 +19711,7 @@
     },
     {
       "type": "application",
-      "bom-ref": "e2b49921-7929-492d-b6af-41a223d8b988",
+      "bom-ref": "314b7fb7-525a-4cff-be4c-c06944aa163c",
       "name": "package-lock.json",
       "properties": [
         {
@@ -25036,7 +24967,7 @@
     },
     {
       "type": "application",
-      "bom-ref": "51e28669-1181-450d-a00d-58b147ca31db",
+      "bom-ref": "4250695b-893f-48dd-a98b-613fae5ffaa5",
       "name": "/repo/webapps/frontend",
       "properties": [
         {
@@ -25410,6 +25341,7 @@
         "pkg:maven/org.operaton.bpm.webapp/operaton-webapp-root@2.2.0-M3?type=pom",
         "pkg:maven/org.operaton.bpm.webapp-neo/operaton-webapp-neo-root@2.2.0-M3?type=pom",
         "pkg:maven/org.operaton.bpm.example/operaton-example-root@2.2.0-M3?type=pom",
+        "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
         "pkg:maven/org.operaton.bpm.tomcat/operaton-tomcat@2.2.0-M3?type=pom"
       ]
     },
@@ -27194,6 +27126,13 @@
       ]
     },
     {
+      "ref": "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
+      "dependsOn": [
+        "pkg:maven/org.operaton.bpm/operaton-engine@2.2.0-M3?type=jar",
+        "pkg:maven/org.junit.jupiter/junit-jupiter@6.0.3?type=jar"
+      ]
+    },
+    {
       "ref": "pkg:maven/org.operaton.bpm/operaton-external-task-client-root@2.2.0-M3?type=pom",
       "dependsOn": [
         "pkg:maven/org.junit.jupiter/junit-jupiter@6.0.3?type=jar",
@@ -27429,12 +27368,6 @@
       ]
     },
     {
-      "ref": "pkg:maven/org.operaton.bpm.distro/operaton-sql-scripts@7.25.0?type=jar",
-      "dependsOn": [
-        "pkg:maven/org.junit.jupiter/junit-jupiter@6.0.3?type=jar"
-      ]
-    },
-    {
       "ref": "pkg:maven/org.operaton.bpm.tomcat/operaton-tomcat-assembly@2.2.0-M3?type=tar.gz",
       "dependsOn": [
         "pkg:maven/org.apache.tomcat/tomcat@11.0.25?type=tar.gz",
@@ -27468,13 +27401,7 @@
       "dependsOn": []
     },
     {
-      "ref": "51e28669-1181-450d-a00d-58b147ca31db",
-      "dependsOn": [
-        "e2b49921-7929-492d-b6af-41a223d8b988"
-      ]
-    },
-    {
-      "ref": "e2b49921-7929-492d-b6af-41a223d8b988",
+      "ref": "314b7fb7-525a-4cff-be4c-c06944aa163c",
       "dependsOn": [
         "pkg:npm/%40bpmn-io/dmn-migrate@0.7.1",
         "pkg:npm/%40bpmn-io/form-js@1.24.1",
@@ -27521,6 +27448,12 @@
         "pkg:npm/requirejs-angular-define@1.1.0",
         "pkg:npm/requirejs@2.3.8",
         "pkg:npm/superagent@10.3.0"
+      ]
+    },
+    {
+      "ref": "4250695b-893f-48dd-a98b-613fae5ffaa5",
+      "dependsOn": [
+        "314b7fb7-525a-4cff-be4c-c06944aa163c"
       ]
     },
     {
