@@ -5,13 +5,19 @@
     <groupId>org.operaton.bpm</groupId>
     <artifactId>operaton-database-settings</artifactId>
     <relativePath>../../database</relativePath>
-    <version>2.2.0-M3</version>
+    <version>2.2.0-SNAPSHOT</version>
   </parent>
   <groupId>org.operaton.bpm.wildfly</groupId>
   <artifactId>operaton-wildfly</artifactId>
   <packaging>pom</packaging>
   <name>Operaton - Wildfly</name>
   <description>${project.name}</description>
+  <properties>
+    <!-- Server distro assemblies are only repackaging steps, but their
+      archives dominate the build cache volume (hundreds of MB per distro);
+      storing them buys a few seconds of zip work for a lot of storage -->
+    <maven.build.cache.enabled>false</maven.build.cache.enabled>
+  </properties>
   <dependencyManagement>
     <dependencies>
       <dependency>
